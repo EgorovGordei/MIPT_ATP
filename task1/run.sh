@@ -7,21 +7,21 @@ targz=$4
 # create directory to copy all files
 mkdir $backup
 
-# find all files and copy them into all_files
+# find all files
 nice_files=$(find $path -type f -name "*.$dot")
-tmp=123456
+
+# copy files
+#tmp=123456
+#echo $nice_files
 for fn in $nice_files
 do
-  #mkdir -p "$backup/$fn"
-  #cp $fn "$backup/$fn"
-  cp $fn "$backup/$tmp"
-  tmp=$(($tmp+1))
+  crr_dir=$(dirname $fn)
+  #echo $crr_dir
+  #echo $fn
+  mkdir "$backup/$crr_dir"
+  cp $fn "$backup/$crr_dir/"
 done
 tar -zcf $targz $nice_files
-#rm tmp_12345678913579
-
-# make .tar.gz
-#tar -c -f $targz $backup
 
 # end of program
 echo "done"
