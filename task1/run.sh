@@ -11,8 +11,9 @@ mkdir $backup
 nice_files=$(find $path -type f -name "*.$dot")
 for fn in $nice_files
 do
-  mkdir -p "$backup/$fn"
-  cp $fn "$backup/$fn"
+  #mkdir -p "$backup/$fn"
+  #cp $fn "$backup/$fn"
+  cp $fn $backup
 done
 tar -zcf $targz $nice_files
 #rm tmp_12345678913579
