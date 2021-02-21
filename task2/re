@@ -1,0 +1,12 @@
+./clr
+
+
+echo ""
+echo "Directory is ready to launch cmake"
+echo ""
+
+mkdir build
+cd build
+cmake ..
+make
+cd ..
