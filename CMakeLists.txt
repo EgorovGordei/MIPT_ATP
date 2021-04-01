@@ -1,5 +1,6 @@
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/aarch64-linux-gnu-c++) #STEP1: SETTING COMPILER
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 cmake_minimum_required(VERSION 3.0)
 
@@ -16,3 +17,11 @@ add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
+
+#install(TARGETS Main MainLib 
+#	RUNTIME DESTINATION "${SimpleLibrary_SOURCE_DIR}/bin"
+#	LIBRARY DESTINATION "${SimpleLibrary_SOURCE_DIR}/lib")
+install(TARGETS Main MainLib 
+	RUNTIME DESTINATION bin
+	LIBRARY DESTINATION lib)
+
