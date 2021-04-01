@@ -2,7 +2,7 @@ rm -r build
 
 mkdir build
 cd build
-cmake ../ -DARM_BUILD=ON -DTOOLCHAIN=/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/tools/toolchain/bin/ -DCMAKE_INSTALL_PREFIX=tmp/
+cmake ../ -DARM_BUILD=ON -DTOOLCHAIN=/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/tools/toolchain/bin -DCMAKE_INSTALL_PREFIX=tmp/
 make
 make install
 

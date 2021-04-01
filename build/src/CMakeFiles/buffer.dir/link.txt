@@ -1,1 +1,0 @@
-/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/tools/toolchain/bin//aarch64-linux-gnu-c++ -fPIC   -shared -Wl,-soname,libbuffer.so -o ../../lib/libbuffer.so CMakeFiles/buffer.dir/buffer.cpp.o 
