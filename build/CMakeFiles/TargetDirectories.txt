@@ -1,0 +1,7 @@
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/CMakeFiles/rebuild_cache.dir
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/CMakeFiles/edit_cache.dir
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/CMakeFiles/MainLib.dir
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/CMakeFiles/Main.dir
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/src/CMakeFiles/rebuild_cache.dir
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/src/CMakeFiles/edit_cache.dir
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/build/src/CMakeFiles/buffer.dir

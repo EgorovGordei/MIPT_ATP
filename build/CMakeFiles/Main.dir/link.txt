@@ -1,0 +1,1 @@
+/home/swarm/mipt_atp_tech_all/tech3/MIPT_ATP/tools/toolchain/bin//aarch64-linux-gnu-c++    -rdynamic CMakeFiles/Main.dir/main.cpp.o  -o ../bin/Main 
