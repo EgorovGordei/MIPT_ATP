@@ -21,7 +21,7 @@ target_link_libraries(MainLib buffer)
 #install(TARGETS Main MainLib 
 #	RUNTIME DESTINATION "${SimpleLibrary_SOURCE_DIR}/bin"
 #	LIBRARY DESTINATION "${SimpleLibrary_SOURCE_DIR}/lib")
-install(TARGETS Main MainLib 
+install(TARGETS Main MainLib buffer
 	RUNTIME DESTINATION bin
 	LIBRARY DESTINATION lib)
 
