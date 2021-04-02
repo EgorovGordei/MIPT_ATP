@@ -18,7 +18,7 @@ add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
 
-set_target_properties(buffer PROPERTY PUBLIC_HEADER buffer.h)
+set_target_properties(buffer PROPERTIES PUBLIC_HEADER buffer.h)
 install(TARGETS Main MainLib buffer
 	RUNTIME DESTINATION bin
 	LIBRARY DESTINATION lib
