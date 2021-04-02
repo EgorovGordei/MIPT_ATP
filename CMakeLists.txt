@@ -18,10 +18,9 @@ add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
 
-#install(TARGETS Main MainLib 
-#	RUNTIME DESTINATION "${SimpleLibrary_SOURCE_DIR}/bin"
-#	LIBRARY DESTINATION "${SimpleLibrary_SOURCE_DIR}/lib")
+set_target_properties(buffer PROPERTY PUBLIC_HEADER buffer.h)
 install(TARGETS Main MainLib buffer
 	RUNTIME DESTINATION bin
-	LIBRARY DESTINATION lib)
+	LIBRARY DESTINATION lib
+	PUBLIC_HEADER DESTINATION lib)
 
