@@ -11,7 +11,7 @@ include_directories(include)
 
 
 file(READ "/home/ubuntu/check/CMakeLists.txt" q)
-message(${q})
+message("${q}")
 
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
