@@ -10,10 +10,6 @@ project(SimpleLibrary)
 include_directories(include)
 
 
-file(READ "/home/ubuntu/check/CMakeLists.txt" q)
-message("${q}")
-
-
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 add_subdirectory(src)
@@ -22,9 +18,10 @@ add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
 
-set_target_properties(buffer PROPERTIES PUBLIC_HEADER include/buffer.h)
+#set_target_properties(buffer PROPERTIES PUBLIC_HEADER include/buffer.h)
 install(TARGETS Main MainLib buffer
 	RUNTIME DESTINATION bin
-	LIBRARY DESTINATION lib
-	PUBLIC_HEADER DESTINATION lib)
+	LIBRARY DESTINATION lib)
+
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/" DESTINATION "${PROJECT_SOURCES}/include")
 
