@@ -8,6 +8,10 @@
 #include <Weather.h>
 
 class WeatherMock : public Weather {
+private:
+	static std::string GetStandartTodayResponse(double temperature);
+	static std::string GetStandartTomorrowResponse(double temperature);
+	virtual cpr::Response Get(const std::string& city, const cpr::Url& url) override;
 };
 
 
