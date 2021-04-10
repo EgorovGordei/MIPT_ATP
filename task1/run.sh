@@ -1,10 +1,3 @@
-# getting parametres
-#path=$1
-#path_len=${#path}
-#dot=$2
-#backup=$3
-#targz=$4
-
 # create directory to copy all files
 mkdir -p $3
 
