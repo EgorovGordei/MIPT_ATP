@@ -1,5 +1,5 @@
 name: This is a workflow
-on: push
+on: [push, pull_request]
 jobs:
         build:
                 name: First hello world
