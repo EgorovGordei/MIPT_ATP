@@ -8,6 +8,6 @@ jobs:
                         - uses: actions/checkout@v1
                         - uses: ./actions
                           with:
-                                  MY_NAME: "GISwarm"
+                                  MY_NAME: "GIS"
 
 
