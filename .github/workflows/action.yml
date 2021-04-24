@@ -22,25 +22,12 @@ jobs:
              cmake ../
              make
              sudo make install
-             echo "!!!1"
-             pwd
-             echo "!!!2"
-             ls bin
-             echo "!!!3"
-             ls lib
-             echo "!!!4"
-             ls /usr/local/exe/bin
-             echo "!!!5"
-             ls ../bin
-             echo "!!!6"
-             ls ../lib
-             echo "!!!7"
 
 
       - name: Test
         uses: akhtyamovpavel/ActionGtestReport@v0.0.9
         with:
-          exec-path: task5/bin/CTestExe #/home/runner/work/MIPT_ATP/MIPT_ATP/task5/bin/CTestExe #tas5/bin
+          exec-path: task5/bin/CTestExe
           report-path: report.xml
           working-directory: . 
 
@@ -52,9 +39,4 @@ jobs:
           path: |
             task5/bin
             task5/lib
-                  #task5/bin
-                  #task5/lib
-                  #/home/runner/work/MIPT_ATP/MIPT_ATP/task5/bin/ #task5/bin #build/bin
-                  #/home/runner/work/MIPT_ATP/MIPT_ATP/task5/lib/ #task5/lib #build/lib
 
-       
