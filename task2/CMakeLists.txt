@@ -10,7 +10,9 @@ project(B)
 
 # step 2
 # run .py file
-execute_process(COMMAND python3 "${CMAKE_SOURCE_DIR}/A/preparing.py"
+#execute_process(COMMAND python3 "${CMAKE_SOURCE_DIR}/A/preparing.py"
+#	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/A/")
+add_custom_target(create_header COMMAND python3 "${CMAKE_SOURCE_DIR}/A/preparing.py"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/A/")
 
 # step 4
