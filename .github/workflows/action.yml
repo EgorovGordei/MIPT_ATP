@@ -10,7 +10,7 @@ jobs:
       - name: preparations
         uses: actions/checkout@v2
         with:
-          repository: google/googletest.git
+          repository: google/googletest
           path: 'task5/3rdparty'
       - name: Build        
         run: |
