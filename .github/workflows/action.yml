@@ -17,8 +17,7 @@ jobs:
       - name: Build        
         run: |
              pwd
-             ls task5
-             ls ../
+             ls task5/3rdparty
              cd task5/3rdparty
              cp -f -r ./googletest/. .
              cd ../
