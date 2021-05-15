@@ -5,14 +5,15 @@ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE) 		   #STEP2: CMAKE WILL NOW USE RPAT
 cmake_minimum_required(VERSION 3.0)
 project(SimpleLibrary)
 
-include_directories(include)
-
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${SimpleLibrary_SOURCE_DIR}/lib)
 add_subdirectory(src)
 add_executable(Main main.cpp)
 add_executable(MainLib main_lib.cpp)
+target_include_directories(Main PUBLIC include)
+target_include_directories(MainLib PUBLIC include)
+
 
 target_link_libraries(MainLib buffer)
 
