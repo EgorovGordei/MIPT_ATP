@@ -7,17 +7,15 @@ jobs:
   config:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Build
+      - name: preparations
         uses: actions/checkout@v2
         with:
-                repository: google/googletest.git
-                path: 'task5/3rdparty'
+          repository: google/googletest.git
+          path: 'task5/3rdparty'
+      - name: Build        
         run: |
              mkdir task5/3rdparty
              cd task5/3rdparty
-             git clone https://github.com/google/googletest.git
              cp -f -r ./googletest/. .
              cd ../
 
