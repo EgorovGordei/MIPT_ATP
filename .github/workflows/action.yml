@@ -16,12 +16,9 @@ jobs:
           path: 'task5/3rdparty'
       - name: Build        
         run: |
-             pwd
-             cd task5/3rdparty
-             #cp -f -r ./googletest/. .
+             cd task5
              cd ../
-             ls 3rdparty
-
+            
              mkdir build
              cd build
              cmake ../
