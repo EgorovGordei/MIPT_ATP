@@ -8,9 +8,12 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib/)
 project(B)
 
 # create executable
-include_directories(${CMAKE_SOURCE_DIR} "${CMAKE_SOURCE_DIR}/A/" "${CMAKE_SOURCE_DIR}/C/")
 add_executable(C "${CMAKE_SOURCE_DIR}/C/main.h" "${CMAKE_SOURCE_DIR}/A/index.h" "${CMAKE_SOURCE_DIR}/C/main.cpp") 
+target_include_directories(C PUBLIC ${CMAKE_SOURCE_DIR} "${CMAKE_SOURCE_DIR}/A/" "${CMAKE_SOURCE_DIR}/C/")
+
 add_executable(CTest ${CMAKE_SOURCE_DIR}/C/main_test.cpp)
+target_include_directories(CTest PUBLIC ${CMAKE_SOURCE_DIR} "${CMAKE_SOURCE_DIR}/A/" "${CMAKE_SOURCE_DIR}/C/")
+
 add_dependencies(CTest preparing.py)
 
 add_custom_target(make_header ALL DEPENDS "${CMAKE_SOURCE_DIR}/A/index.h")
