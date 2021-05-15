@@ -10,6 +10,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build
+        uses: actions/checkout@v2
+        with:
+                repository: google/googletest.git
+                path: 'task5/3rdparty'
         run: |
              mkdir task5/3rdparty
              cd task5/3rdparty
