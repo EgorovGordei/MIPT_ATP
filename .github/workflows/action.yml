@@ -16,8 +16,9 @@ jobs:
           path: 'task5/3rdparty'
       - name: Build        
         run: |
-             ls
              pwd
+             ls task5
+             ls ../
              cd task5/3rdparty
              cp -f -r ./googletest/. .
              cd ../
