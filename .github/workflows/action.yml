@@ -17,8 +17,6 @@ jobs:
       - name: Build        
         run: |
              cd task5
-             cd ../
-            
              mkdir build
              cd build
              cmake ../
