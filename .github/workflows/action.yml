@@ -1,0 +1,42 @@
+name: GitHub Actions Build
+on: 
+  push:
+    branches: 
+      [ task5 ]
+jobs:
+  config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: preparations
+        uses: actions/checkout@v2
+        with:
+          repository: google/googletest
+          path: 'task5/3rdparty'
+      - name: Build        
+        run: |
+             cd task5
+             mkdir build
+             cd build
+             cmake ../
+             make
+             sudo make install
+
+
+      - name: Test
+        uses: akhtyamovpavel/ActionGtestReport@v0.0.9
+        with:
+          exec-path: task5/bin/CTestExe
+          report-path: report.xml
+          working-directory: . 
+
+
+      - name: UploadArtifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Distributive
+          path: |
+            task5/bin
+            task5/lib
+
